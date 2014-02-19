@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.main {
+			border: 1px solid #000;
+			margin: 50px auto;
+			padding: 20px;
+			width: 400px;
+		}
+		.block {
+			margin-bottom: 15px;
+		}
+		.block label {
+			width: 200px;
+			text-align: left;
+			display: inline-block;
+		}
+		#error,
+		#merror {
+			color: red;
+			display: none;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h1 id="title">Add</h1>
+		<div class="block">
+			<label for="">Enter first Number</label>
+			<input type="text" id="one">
+			<p id="error">Enter your number</p>
+		</div>
+		<div class="block">
+			<label for="">Enter second Number</label>
+			<input type="text" id="two">
+		</div>
+		<div class="block">
+			<label for="">Result</label>
+			<input type="text" id="result" placeholder= "result" value= ''>
+		</div>
+		<input type="button" value="Add" onclick="myAdd();">
+	</div>
+
+	<div class="main">
+		<h1 id="title">Multiply</h1>
+		<div class="block">
+			<label for="">Enter first Number</label>
+			<input type="text" id="first">
+			<p id="merror">Enter your number</p>
+		</div>
+		<div class="block">
+			<label for="">Enter second Number</label>
+			<input type="text" id="sec">
+		</div>
+		<div class="block">
+			<label for="">Result</label>
+			<input type="text" id="mresult" placeholder= "result" value= ''>
+		</div>
+		<input type="button" value="Multiply" onclick="myMut();">
+	</div>
+
+</body>
+
+<script>
+
+	/* function to add two numbers */
+	function myAdd() {
+		var firstN = parseInt(document.getElementById('one').value);
+		var secondN = parseInt(document.getElementById('two').value);
+
+		(function() {
+			var result = firstN+secondN;
+			document.getElementById('result').value = result;
+			
+			/* checking whether input feild is null */
+			var error = document.getElementById('error');
+			if (isNaN(result)) {
+				error.style.display = 'block'; 
+			}
+
+		})(); /* self calling function */
+
+		
+	};
+
+	/* function to Multiply two numbers */
+	function myMut() {
+		var firstN = parseInt(document.getElementById('first').value);
+		var secondN = parseInt(document.getElementById('sec').value);
+
+		(function() {
+			var result = firstN*secondN;
+			document.getElementById('mresult').value = result;
+
+		})(); /* self calling function */
+
+	};
+
+
+
+	
+
+</script>
+
+</html>
