@@ -53,17 +53,17 @@
             var r = 0;
             
             for(var i = 0; i < y; i++) {
-                r = this.add(r, x);
+                r = add(r, x);
             }
             
             return r;
-        }.bind(this);
+        };
         
         // focus here - this is the object that we want
         // code above this is just to build this object
         return {
-            "add": addMethod,
-            "mul": mulMethod
+            'add': addMethod,
+            'mul': mulMethod
         }
 
     })();
@@ -78,7 +78,7 @@
         mul: function (x, y) {
             var r = 0;
             for(var i = 0; i < y; i++) {
-                r = this.add(r, x);
+                r = add(r, x);
             }
             return r;
         }
