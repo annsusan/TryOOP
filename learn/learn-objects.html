@@ -44,9 +44,7 @@
 <pre class="prettyprint">
 <code>
     // self executing
-    var myCal = (function() {
-        var self = this;
-            
+    var myCal = (function() {           
         var addMethod = function(x, y) {
             return x + y;
         };
@@ -55,11 +53,11 @@
             var r = 0;
             
             for(var i = 0; i < y; i++) {
-                r = self.add(r, x);
+                r = this.add(r, x);
             }
             
             return r;
-        };
+        }.bind(this);
         
         // focus here - this is the object that we want
         // code above this is just to build this object
