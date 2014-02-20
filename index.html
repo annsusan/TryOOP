@@ -69,8 +69,8 @@
 
 	/* function to add two numbers */
 	function myAdd() {
-		var firstN = parseInt(document.querySelector('#one').value, 10);
-		var secondN = parseInt(document.querySelector('#two').value, 10);
+		var firstN = +(document.querySelector('#one').value);
+		var secondN = +(document.querySelector('#two').value);
 
 		(function() {
 			var result = firstN+secondN;
@@ -89,8 +89,8 @@
 
 	/* function to Multiply two numbers */
 	function myMut() {
-		var firstN = parseInt(document.querySelector('#first').value, 10);
-		var secondN = parseInt(document.querySelector('#sec').value, 10);
+		var firstN = +(document.querySelector('#first').value);
+		var secondN = +(document.querySelector('#sec').value);
 
 		(function() {
 			var result = firstN*secondN;
