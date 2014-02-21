@@ -69,15 +69,15 @@
 
 	/* function to add two numbers */
 	function myAdd() {
-		var firstN = parseInt(document.getElementById('one').value);
-		var secondN = parseInt(document.getElementById('two').value);
+		var firstN = +(document.querySelector('#one').value);
+		var secondN = +(document.querySelector('#two').value);
 
 		(function() {
 			var result = firstN+secondN;
-			document.getElementById('result').value = result;
+			document.querySelector('#result').value = result;
 			
 			/* checking whether input feild is null */
-			var error = document.getElementById('error');
+			var error = document.querySelector('#error');
 			if (isNaN(result)) {
 				error.style.display = 'block'; 
 			}
@@ -89,12 +89,12 @@
 
 	/* function to Multiply two numbers */
 	function myMut() {
-		var firstN = parseInt(document.getElementById('first').value);
-		var secondN = parseInt(document.getElementById('sec').value);
+		var firstN = +(document.querySelector('#first').value);
+		var secondN = +(document.querySelector('#sec').value);
 
 		(function() {
 			var result = firstN*secondN;
-			document.getElementById('mresult').value = result;
+			document.querySelector('#mresult').value = result;
 
 		})(); /* self calling function */
 
